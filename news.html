@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>最新消息 - 許正祐</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Microsoft JhengHei', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #34495e;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p.slogan {
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 0.6rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #2980b9;
+      font-weight: 600;
+      margin: 0 1rem;
+      padding: 0.6rem 1rem;
+      border: 2px solid #2980b9;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    nav a:hover, nav a.active {
+      background-color: #2980b9;
+      color: white;
+    }
+    h2 {
+      color: #2980b9;
+      border-left: 5px solid #2980b9;
+      padding-left: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .news-item {
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 0;
+    }
+    .news-item:last-child {
+      border-bottom: none;
+    }
+    .news-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #34495e;
+      margin-bottom: 0.3rem;
+    }
+    .news-date {
+      font-size: 0.9rem;
+      color: #999;
+      margin-bottom: 0.6rem;
+    }
+    .news-content {
+      font-size: 1rem;
+      color: #555;
+    }
+    .news-image {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 0.5rem;
+    }
+    /* 回頂部按鈕 */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 2rem;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+      z-index: 1000;
+    }
+    #backToTop:hover {
+      opacity: 1;
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 1rem 1.5rem;
+        margin: 1rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      header p.slogan {
+        font-size: 1rem;
+      }
+      nav a {
+        margin: 0 0.5rem;
+        padding: 0.5rem 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>許正祐</h1>
+  <p class="slogan">里的新選擇</p>
+  <img src="photo.jpg" alt="許正祐照片" style="width:120px; height:120px; border-radius:50%; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.2); margin-top: 1rem;">
+</header>
+
+<main>
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="about.html">關於我</a>
+    <a href="policies.html">政見專區</a>
+    <a href="news.html" class="active">最新消息</a>
+    <a href="suggest.html">里民建議</a>
+    <a href="contact.html">聯絡我</a>
+  </nav>
+
+  <section>
+    <h2>最新消息</h2>
+
+    <article class="news-item">
+      <div class="news-title">6/30 社區清潔大掃除</div>
+      <div class="news-date">2025-06-15</div>
+      <div class="news-content">
+        本次活動將邀請社區居民共同參與，清理公共空間，營造更美好的居住環境。<br />
+        地點：幸福公園，時間：上午9點至中午12點。
+      </div>
+    </article>
+
+    <article class="news-item">
+      <div class="news-title">7/5 政見說明會</div>
+      <div class="news-date">2025-06-20</div>
+      <div class="news-content">
+        誠摯邀請里民參加政見說明會，了解更多關於我推動的社區建設計畫。<br />
+        地點：里活動中心，時間：晚上7點至9點。
+      </div>
+    </article>
+
+    <!-- 你可以照格式再新增更多最新消息 -->
+
+  </section>
+</main>
+
+<button id="backToTop" title="回到頂部" aria-label="回到頂部">↑</button>
+
+<script>
+  const backToTopBtn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      backToTopBtn.style.display = 'flex';
+    } else {
+      backToTopBtn.style.display = 'none';
+    }
+  });
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>

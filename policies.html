@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>政見專區 - 許正祐</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Microsoft JhengHei', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #34495e;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p.slogan {
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #2980b9;
+      font-weight: 600;
+      margin: 0 1rem;
+      padding: 0.6rem 1rem;
+      border: 2px solid #2980b9;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    nav a:hover, nav a.active {
+      background-color: #2980b9;
+      color: white;
+    }
+    h2 {
+      color: #2980b9;
+      border-left: 5px solid #2980b9;
+      padding-left: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .policy-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .policy-card {
+      background: #eaf2f8;
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .policy-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .policy-icon {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: #2980b9;
+    }
+    .policy-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .policy-desc {
+      font-size: 1rem;
+      color: #555;
+    }
+    /* 回頂部按鈕 */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 2rem;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+      z-index: 1000;
+    }
+    #backToTop:hover {
+      opacity: 1;
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 1rem 1.5rem;
+        margin: 1rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      header p.slogan {
+        font-size: 1rem;
+      }
+      nav a {
+        margin: 0 0.5rem;
+        padding: 0.5rem 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>許正祐</h1>
+  <p class="slogan">里的新選擇</p>
+  <img src="photo.jpg" alt="許正祐照片" style="width:120px; height:120px; border-radius:50%; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.2); margin-top: 1rem;">
+</header>
+
+<main>
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="about.html">關於我</a>
+    <a href="policies.html" class="active">政見專區</a>
+    <a href="news.html">最新消息</a>
+    <a href="suggest.html">里民建議</a>
+    <a href="contact.html">聯絡我</a>
+  </nav>
+
+  <section>
+    <h2>主要政見</h2>
+    <div class="policy-list">
+      <div class="policy-card">
+        <div class="policy-icon">🛝</div>
+        <div class="policy-title">社區設施改善</div>
+        <div class="policy-desc">公園翻修、兒童遊樂設施升級，讓孩子有更安全的玩樂空間。</div>
+      </div>
+
+      <div class="policy-card">
+        <div class="policy-icon">🚧</div>
+        <div class="policy-title">基礎建設</div>
+        <div class="policy-desc">路燈更新、水溝清潔與社區道路維護，提升生活品質與安全。</div>
+      </div>
+
+      <div class="policy-card">
+        <div class="policy-icon">🧓</div>
+        <div class="policy-title">關懷長者</div>
+        <div class="policy-desc">定期關懷訪視與健康講座，讓長輩安心享受晚年生活。</div>
+      </div>
+
+      <div class="policy-card">
+        <div class="policy-icon">🌱</div>
+        <div class="policy-title">環保永續</div>
+        <div class="policy-desc">推動社區綠化與資源回收，營造永續友善的生活環境。</div>
+      </div>
+
+      <div class="policy-card">
+        <div class="policy-icon">👫</div>
+        <div class="policy-title">社區安全</div>
+        <div class="policy-desc">成立巡守隊與強化監視器設備，確保居民居家安全。</div>
+      </div>
+
+        <div class="policy-card">
+            <div class="policy-icon">💬</div>
+            <div class="policy-title">透明溝通</div>
+            <div class="policy-desc">定期舉辦里民座談會，聽取居民意見，讓政策更貼近民心。</div>
+    </div>
+
+      <div class="policy-card">
+        <div class="policy-icon">🏫</div>
+        <div class="policy-title">教育資源</div>
+        <div class="policy-desc">推動社區教育活動，提升居民的知識與技能。</div>
+      </div>
+
+      <div class="policy-card">
+        <div class="policy-icon">🤝</div>
+        <div class="policy-title">社區凝聚</div>
+        <div class="policy-desc">舉辦各類社區活動，增進居民間的互動與友誼。</div>
+      </div>
+
+      
+    </div>
+  </section>
+</main>
+
+<button id="backToTop" title="回到頂部" aria-label="回到頂部">↑</button>
+
+<script>
+  const backToTopBtn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      backToTopBtn.style.display = 'flex';
+    } else {
+      backToTopBtn.style.display = 'none';
+    }
+  });
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
